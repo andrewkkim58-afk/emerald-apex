@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Andrew Kim // Terminal Vault</title>
+    
+    <meta name="description" content="Official repository for the Emerald Apex framework: Operator-theoretic stabilization and the Solipsistic Phase transition.">
+    <meta property="og:title" content="Andrew Kim // Emerald Apex">
+    <meta property="og:description" content="Spectral gap dominance and Kim-Einstein field law derivations.">
+    <meta name="theme-color" content="#0a0a0a">
+
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&family=JetBrains+Mono:wght@400;700&display=swap');
@@ -49,6 +55,7 @@
             <div class="mono text-xs md:text-sm text-zinc-500 space-y-2">
                 <p class="flex"><span class="text-zinc-400 w-24 flex-shrink-0">LOCATION:</span> <span class="text-zinc-300">Emerald Research Group, Irvine, CA</span></p>
                 <p class="flex"><span class="text-zinc-400 w-24 flex-shrink-0">CONTACT:</span> <a href="mailto:andrewkim.research@pm.me" class="text-blue-400 hover:text-blue-300 transition-colors">andrewkim.research@pm.me</a></p>
+                <p class="flex"><span class="text-zinc-400 w-24 flex-shrink-0">SOURCE:</span> <a href="https://github.com/andrewkkim58-afk/emerald-apex" target="_blank" class="text-emerald-400 hover:text-emerald-300 transition-colors">github.com/emerald-apex</a></p>
                 <p class="flex"><span class="text-zinc-400 w-24 flex-shrink-0">COMPUTE:</span> <span class="text-zinc-300">Local Array (i9-14900K, 192GB RAM, RTX 5090)</span></p>
                 <p class="flex"><span class="text-zinc-400 w-24 flex-shrink-0">DOMAIN:</span> <span class="text-zinc-300">Operator Theory / Quantum Computing / AI Architecture / Cosmology</span></p>
             </div>
@@ -69,12 +76,17 @@
                     <h3 class="text-xs font-bold text-blue-400 uppercase tracking-widest mb-3 mono flex items-center">
                         <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
                         L4 MASTER ARTIFACT: THE EMERALD APEX
-					<p class="mt-2">
-						<a href="https://doi.org/10.5281/zenodo.19248447" class="text-[10px] text-blue-400/60 hover:text-blue-400 mono">	
-							DOI: 10.5281/zenodo.19248447
-						</a>
-					</p>			
-					</h3>
+                    </h3>
+                    
+                    <div class="mt-4 flex flex-wrap gap-3 mb-6">
+                        <a href="https://doi.org/10.5281/zenodo.19252002" target="_blank" class="flex items-center px-3 py-1 bg-blue-500/10 border border-blue-500/30 rounded text-[10px] text-blue-400 hover:bg-blue-500/20 transition-all mono">
+                            <span class="mr-2">●</span> MANUSCRIPT I: SPECTRAL PHASE-LESS TRANSPORT
+                        </a>
+                        <a href="https://doi.org/10.5281/zenodo.19205731" target="_blank" class="flex items-center px-3 py-1 bg-purple-500/10 border border-purple-500/30 rounded text-[10px] text-purple-400 hover:bg-purple-500/20 transition-all mono">
+                            <span class="mr-2">●</span> MANUSCRIPT II: THE SOLIPSISTIC PHASE
+                        </a>
+                    </div>
+                    
                     <h4 class="text-2xl font-bold text-white mb-2">Unified Spectral Dominance & The Solipsistic Phase</h4>
                     <p class="text-sm text-zinc-300 mb-6 leading-relaxed">
                         A fully closed operator-theoretic synthesis connecting microscopic gap amplification to macroscopic thermodynamic collapse and coherent gravitational transport. The framework proves that quantum measurement, entropy collapse, and geometric field generation are emergent properties of an infinite spectral limit ($\Xi \to \infty$).
@@ -103,7 +115,35 @@
         </section>
 
         <section class="mb-16">
-            <h3 class="text-xs font-bold text-zinc-500 uppercase tracking-widest mb-5 mono">02 // The Formal Execution Loop</h3>
+            <h3 class="text-xs font-bold text-zinc-500 uppercase tracking-widest mb-5 mono">02 // Operator Telemetry [KALKI_REGIME]</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 font-mono">
+                <div class="bg-zinc-900/40 border border-zinc-800 p-6 rounded-lg">
+                    <h4 class="text-xs font-bold text-blue-400 mb-4 uppercase">Fig 1.1: Spectral Splitting</h4>
+                    <div class="text-[10px] text-zinc-500 mb-4 leading-relaxed italic border-l border-zinc-700 pl-3">
+                        Empirical validation of ground-state invariance $\lambda_0$ vs. sector lifting $\lambda_n = (2n+1) + \mu$.
+                    </div>
+                    <div class="space-y-2 text-[10px]">
+                        <div class="flex justify-between border-b border-zinc-800/50 pb-1 text-emerald-400"><span>SIGNAL MODE (λ₀)</span> <span>1.0000 (INVARIANT)</span></div>
+                        <div class="flex justify-between border-b border-zinc-800/50 pb-1 text-zinc-400"><span>NOISE MODE 1 (λ₁)</span> <span>3.0000 + μ</span></div>
+                        <div class="flex justify-between border-b border-zinc-800/50 pb-1 text-zinc-400"><span>NOISE MODE 2 (λ₂)</span> <span>5.0000 + μ</span></div>
+                    </div>
+                </div>
+                <div class="bg-zinc-900/40 border border-zinc-800 p-6 rounded-lg">
+                    <h4 class="text-xs font-bold text-red-400 mb-4 uppercase">Fig 1.2: Semigroup Suppression</h4>
+                    <div class="text-[10px] text-zinc-500 mb-4 leading-relaxed italic border-l border-zinc-700 pl-3">
+                        Amplitude persistence Audit at $\mu=4.0$. Data derived from local JAX telemetry.
+                    </div>
+                    <div class="space-y-2 text-[10px]">
+                        <div class="flex justify-between border-b border-zinc-800/50 pb-1 text-emerald-400"><span>PROTECTED CHANNEL</span> <span>100.0% PERSISTENCE</span></div>
+                        <div class="flex justify-between border-b border-zinc-800/50 pb-1 text-red-400/80"><span>CROSS-MODE LEAKAGE</span> <span>&lt; 0.0004 (exp⁻⁶ᵗ)</span></div>
+                        <div class="flex justify-between border-b border-zinc-800/50 pb-1 text-red-400/80"><span>THERMAL NOISE</span> <span>&lt; 0.00003 (exp⁻⁸ᵗ)</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-16">
+            <h3 class="text-xs font-bold text-zinc-500 uppercase tracking-widest mb-5 mono">03 // The Formal Execution Loop</h3>
             <div class="bg-black/50 border border-zinc-800 rounded-lg p-6 mono text-xs md:text-sm space-y-5">
                 <div class="flex items-start">
                     <span class="text-blue-500 mr-4 font-bold">01.</span> 
@@ -128,7 +168,7 @@
         </section>
         
         <section class="mb-16">
-            <h3 class="text-xs font-bold text-zinc-500 uppercase tracking-widest mb-5 mono">03 // Foundational Stack (SKILL.md)</h3>
+            <h3 class="text-xs font-bold text-zinc-500 uppercase tracking-widest mb-5 mono">04 // Foundational Stack (SKILL.md)</h3>
             
             <div class="border border-zinc-800 bg-zinc-950 p-6 md:p-8 rounded-lg relative overflow-hidden">
                 <div class="mb-8 pb-6 border-b border-zinc-800">
@@ -189,7 +229,7 @@
         </section>
 
         <section class="mb-16">
-            <h3 class="text-xs font-bold text-zinc-500 uppercase tracking-widest mb-5 mono">04 // Full-Stack Architecture Records</h3>
+            <h3 class="text-xs font-bold text-zinc-500 uppercase tracking-widest mb-5 mono">05 // Full-Stack Architecture Records</h3>
             
             <div class="grid grid-cols-1 gap-6">
                 <div class="border border-zinc-800 bg-zinc-900/40 p-6 md:p-8 rounded-lg hover:border-zinc-500/40 transition-colors group relative overflow-hidden">
@@ -243,7 +283,7 @@
         </section>
 
         <section class="mb-16">
-            <h3 class="text-xs font-bold text-zinc-500 uppercase tracking-widest mb-5 mono">05 // Bare-Metal Telemetry & Numerical Validation</h3>
+            <h3 class="text-xs font-bold text-zinc-500 uppercase tracking-widest mb-5 mono">06 // Bare-Metal Telemetry & Numerical Validation</h3>
             <div class="bg-black/80 border border-zinc-800 rounded-lg p-6 md:p-8 font-mono">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8 border-b border-zinc-800 pb-8">
                     <div class="border-l-2 border-red-500 pl-4 bg-gradient-to-r from-red-500/5 to-transparent">
