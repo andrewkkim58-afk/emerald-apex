@@ -46,6 +46,96 @@
 </head>
 <body class="grid-bg min-h-screen selection:bg-blue-600 selection:text-white pb-24">
 
+	<canvas id="operator-canvas" class="fixed inset-0 w-full h-full -z-10 opacity-40 pointer-events-none"></canvas>
+    <script>
+        const canvas = document.getElementById('operator-canvas');
+        const ctx = canvas.getContext('2d');
+        let width, height;
+
+        function resize() {
+            width = canvas.width = window.innerWidth;
+            height = canvas.height = window.innerHeight;
+        }
+        window.addEventListener('resize', resize);
+        resize();
+
+        const particles = [];
+        const CORE_COUNT = 150;
+        const NOISE_COUNT = 50;
+
+        class Particle {
+            constructor(isCore) {
+                this.isCore = isCore;
+                this.reset();
+            }
+            reset() {
+                this.angle = Math.random() * Math.PI * 2;
+                this.radius = this.isCore ? Math.random() * 150 + 50 : Math.random() * 50;
+                this.speed = this.isCore ? (Math.random() * 0.002 + 0.001) : (Math.random() * 0.02 + 0.01);
+                this.x = width / 2 + Math.cos(this.angle) * this.radius;
+                this.y = height / 2 + Math.sin(this.angle) * this.radius;
+                this.life = this.isCore ? 1 : Math.random() * 0.5 + 0.5;
+                this.decay = this.isCore ? 0 : Math.random() * 0.01 + 0.005;
+                
+                if (this.isCore) {
+                    this.color = Math.random() > 0.5 ? '#50C878' : '#3b82f6'; // Emerald or Blue
+                } else {
+                    this.color = '#ef4444'; // Red (Noise)
+                }
+            }
+            update() {
+                if (this.isCore) {
+                    // Stable Manifold Orbit (The Sigma Subspace)
+                    this.angle += this.speed;
+                    this.x = width / 2 + Math.cos(this.angle) * this.radius;
+                    this.y = height / 2 + Math.sin(this.angle) * this.radius;
+                } else {
+                    // Orthogonal Projection (Expelling Noise)
+                    this.radius += this.speed * 100;
+                    this.x = width / 2 + Math.cos(this.angle) * this.radius;
+                    this.y = height / 2 + Math.sin(this.angle) * this.radius;
+                    this.life -= this.decay;
+                    if (this.life <= 0) this.reset();
+                }
+            }
+            draw() {
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.isCore ? 1.5 : 1, 0, Math.PI * 2);
+                ctx.fillStyle = this.isCore ? this.color : `rgba(239, 68, 68, ${this.life})`;
+                ctx.fill();
+                
+                if (this.isCore && Math.random() > 0.98) {
+                    ctx.shadowBlur = 10;
+                    ctx.shadowColor = this.color;
+                    ctx.fill();
+                    ctx.shadowBlur = 0;
+                }
+            }
+        }
+
+        for (let i = 0; i < CORE_COUNT; i++) particles.push(new Particle(true));
+        for (let i = 0; i < NOISE_COUNT; i++) particles.push(new Particle(false));
+
+        function animate() {
+            ctx.fillStyle = 'rgba(5, 5, 5, 0.15)'; // Trailing effect
+            ctx.fillRect(0, 0, width, height);
+            
+            // Draw subtle central attractor (The Operator)
+            ctx.beginPath();
+            ctx.arc(width/2, height/2, 40, 0, Math.PI*2);
+            ctx.strokeStyle = 'rgba(80, 200, 120, 0.05)';
+            ctx.lineWidth = 1;
+            ctx.stroke();
+
+            particles.forEach(p => {
+                p.update();
+                p.draw();
+            });
+            requestAnimationFrame(animate);
+        }
+        animate();
+    </script>
+
     <main class="max-w-4xl mx-auto px-6 pt-16">
         
         <header class="border-b border-zinc-800 pb-10 mb-14">
