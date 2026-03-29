@@ -1,31 +1,32 @@
 # THE EMERALD APEX: Unified Spectral Dominance
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19248447.svg)](https://doi.org/10.5281/zenodo.19248447)
-[![Website](https://img.shields.io/badge/Live_Vault-Active-blue)](https://andrewkkim58-afk.github.io/emerald-apex/)
+[![DOI: 10.5281/zenodo.19252002](https://zenodo.org/badge/DOI/10.5281/zenodo.19252002.svg)](https://doi.org/10.5281/zenodo.19252002)
+[![DOI: 10.5281/zenodo.19205731](https://zenodo.org/badge/DOI/10.5281/zenodo.19205731.svg)](https://doi.org/10.5281/zenodo.19205731)
+[![Website](https://img.shields.io/badge/Live_Vault-Active-emerald)](https://andrewkkim58-afk.github.io/emerald-apex/)
 
-**Emerald Research Group** | Principal IC: Andrew Kim
+**Emerald Research Group** | Lead Researcher: Andrew Kim
 
-This repository contains the foundational code, theoretical manuscripts, and front-end architecture for the **Emerald Apex** framework. The framework provides a closed operator-theoretic synthesis connecting microscopic spectral gap amplification to macroscopic thermodynamic collapse and coherent gravitational transport.
+This repository contains the foundational code, theoretical manuscripts, and analytical telemetry for the **Emerald Apex** framework—a closed operator-theoretic synthesis for achieving deterministic stability in noisy dynamical systems.
 
-## The Axiom
-> *No heuristic assumptions. All claims derivational. Structure is enforced, not assumed.*
+## 📚 Formal Publications
 
-## Core Artifacts
+The framework is bifurcated into two foundational layers:
 
-1. **`Spectral_Phase-Less_Transition_Travel.pdf`**
-   The formal manuscript detailing the derivation of the Kim-Einstein Field Law and the operator-theoretic bounds of the Solipsistic Phase. 
-   
-2. **`kalki_telemetry.py` (JAX Simulation Engine)**
-   The bare-metal execution script. It natively computes the high-dimensional matrix exponentials to empirically validate the spectral lifting, semigroup suppression, and von Neumann entropy collapse ($S(\rho_\mu) \to 0$) defined in the manuscript. 
-   * Outputs raw telemetry to CSV for reproducible phase-space plotting.
+* **Layer 1 (The Microscopic):** * *Spectral Phase-Less Transition Travel: Operator-Theoretic and Gauge-Geometric Foundations*
+    * **DOI:** [10.5281/zenodo.19252002](https://doi.org/10.5281/zenodo.19252002)
+* **Layer 2 (The Macroscopic):**
+    * *The Emerald Apex: Solipsistic Phase Transitions and the Kim-Einstein Field Law*
+    * **DOI:** [10.5281/zenodo.19205731](https://doi.org/10.5281/zenodo.19205731)
 
-3. **`index.html`**
-   The frontend UI for the Terminal Vault, rendering the canonical equations via CHtml MathJax.
+## ⚙️ Core Artifacts
 
-## Execution Protocol
+1.  **`kalki_telemetry.py` (JAX Simulation Engine)**
+    The bare-metal execution script. It computes high-dimensional matrix exponentials to empirically validate spectral lifting, semigroup suppression, and von Neumann entropy collapse ($S \to 0$).
+2.  **`index.html`**
+    The terminal interface for the Vault, rendering canonical equations and the "Kalki" spectral regime.
 
-To reproduce the terminal regime telemetry locally, you require a compute environment capable of handling high-precision tensor operations (JAX 64-bit enabled).
-
-### Dependencies
+## 🚀 Reproduction Protocol
+Requires JAX (64-bit precision).
 ```bash
 pip install jax jaxlib numpy
+python kalki_telemetry.py
