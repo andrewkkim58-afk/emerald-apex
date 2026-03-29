@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Andrew Kim // Terminal Vault</title>
     
-    <meta name="description" content="Official repository for the Emerald Apex framework: The Grandmaster Action, Quantum Phase Transitions, and the Kim-Einstein Field Law.">
+    <meta name="description" content="Official repository for the Emerald Apex framework: Spectral Gap Amplification, The Grandmaster Action, and the Kim-Einstein Field Law.">
     <meta property="og:title" content="Andrew Kim // Emerald Apex">
     <meta property="og:description" content="Spectral gap dominance across AI continuous learning, quantum decoherence, and macroscopic cosmology.">
     <meta name="theme-color" content="#0a0a0a">
@@ -25,6 +25,13 @@
             animation: blink 1s step-end infinite;
         }
         @keyframes blink { 50% { opacity: 0; } }
+        
+        /* Custom Emerald Brand overrides for exact match to LaTeX */
+        .border-emerald-brand { border-color: rgba(40, 180, 99, 0.4); }
+        .text-emerald-brand { color: #28B463; }
+        .bg-emerald-brand-light { background-color: rgba(40, 180, 99, 0.1); }
+        .hover-bg-emerald-brand:hover { background-color: rgba(40, 180, 99, 0.2); }
+        .shadow-emerald-brand { box-shadow: 0 0 10px rgba(40, 180, 99, 0.15); }
     </style>
 
     <script>
@@ -78,7 +85,7 @@
                 this.decay = this.isCore ? 0 : Math.random() * 0.01 + 0.005;
                 
                 if (this.isCore) {
-                    this.color = Math.random() > 0.5 ? '#50C878' : '#3b82f6'; // Emerald or Blue
+                    this.color = Math.random() > 0.5 ? '#28B463' : '#3b82f6'; // Emerald or Blue
                 } else {
                     this.color = '#ef4444'; // Red (Noise)
                 }
@@ -123,7 +130,7 @@
             // Draw subtle central attractor (The Operator)
             ctx.beginPath();
             ctx.arc(width/2, height/2, 40, 0, Math.PI*2);
-            ctx.strokeStyle = 'rgba(80, 200, 120, 0.05)';
+            ctx.strokeStyle = 'rgba(40, 180, 99, 0.05)';
             ctx.lineWidth = 1;
             ctx.stroke();
 
@@ -144,8 +151,8 @@
             
             <div class="mono text-xs md:text-sm text-zinc-500 space-y-2">
                 <p class="flex"><span class="text-zinc-400 w-24 flex-shrink-0">LOCATION:</span> <span class="text-zinc-300">Emerald Research Group, Irvine, CA</span></p>
-                <p class="flex"><span class="text-zinc-400 w-24 flex-shrink-0">CONTACT:</span> <a href="mailto:andrew@emerald-systems.ai" class="text-emerald-400 hover:text-emerald-300 transition-colors font-semibold tracking-wide">andrew@emerald-systems.ai</a></p>
-                <p class="flex"><span class="text-zinc-400 w-24 flex-shrink-0">SOURCE:</span> <a href="https://github.com/andrewkkim58-afk/emerald-apex" target="_blank" class="text-emerald-400 hover:text-emerald-300 transition-colors">github.com/emerald-apex</a></p>
+                <p class="flex"><span class="text-zinc-400 w-24 flex-shrink-0">CONTACT:</span> <a href="mailto:andrew@emerald-systems.ai" class="text-emerald-brand hover:text-emerald-400 transition-colors font-semibold tracking-wide">andrew@emerald-systems.ai</a></p>
+                <p class="flex"><span class="text-zinc-400 w-24 flex-shrink-0">SOURCE:</span> <a href="https://github.com/andrewkkim58-afk/emerald-apex" target="_blank" class="text-emerald-brand hover:text-emerald-400 transition-colors">github.com/emerald-apex</a></p>
                 <p class="flex"><span class="text-zinc-400 w-24 flex-shrink-0">COMPUTE:</span> <span class="text-zinc-300">Local Array (i9-14900K, 192GB RAM, RTX 5090)</span></p>
                 <p class="flex"><span class="text-zinc-400 w-24 flex-shrink-0">DOMAIN:</span> <span class="text-zinc-300">Operator Theory / AI Architecture / Quantum Computing / Geometric Field Structure / Cosmology</span></p>
             </div>
@@ -169,8 +176,11 @@
                     </h3>
                     
                     <div class="mt-4 flex flex-col sm:flex-row flex-wrap gap-3 mb-6">
-                        <a href="https://doi.org/10.5281/zenodo.19279437" target="_blank" class="flex items-center px-3 py-1.5 bg-emerald-500/10 border border-emerald-500/40 rounded text-[10px] text-emerald-400 hover:bg-emerald-500/20 transition-all mono font-bold shadow-[0_0_10px_rgba(80,200,120,0.1)]">
-                            <span class="mr-2 animate-pulse">●</span> MANUSCRIPT III: THE GRANDMASTER ACTION (Ω–Σ)
+                        <a href="docs/spectral_amp.pdf" target="_blank" class="flex items-center px-3 py-1.5 bg-emerald-brand-light border-emerald-brand rounded text-[10px] text-emerald-brand hover-bg-emerald-brand transition-all mono font-bold shadow-emerald-brand">
+                            <span class="mr-2 animate-pulse">●</span> MANUSCRIPT IV: SPECTRAL GAP AMPLIFICATION
+                        </a>
+                        <a href="https://doi.org/10.5281/zenodo.19279437" target="_blank" class="flex items-center px-3 py-1 bg-cyan-500/10 border border-cyan-500/30 rounded text-[10px] text-cyan-400 hover:bg-cyan-500/20 transition-all mono">
+                            <span class="mr-2">●</span> MANUSCRIPT III: THE GRANDMASTER ACTION (Ω–Σ)
                         </a>
                         <a href="https://doi.org/10.5281/zenodo.19205731" target="_blank" class="flex items-center px-3 py-1 bg-purple-500/10 border border-purple-500/30 rounded text-[10px] text-purple-400 hover:bg-purple-500/20 transition-all mono">
                             <span class="mr-2">●</span> MANUSCRIPT II: THE SOLIPSISTIC PHASE
@@ -187,16 +197,17 @@
                     <div class="mono text-xs space-y-4 text-emerald-300/80 bg-black/40 p-5 rounded border border-emerald-500/20 shadow-inner overflow-x-auto">
                         <p class="text-white font-bold flex items-center">
                             <span class="mr-3 text-emerald-500">»</span> 
+                            <span class="text-sm">Spectral Gap Amplification: $\Delta^{(\alpha)} \ge \Delta^{(0)} + \alpha$</span>
+                        </p>
+                        <div class="h-px bg-emerald-500/20 my-2"></div>
+                        <p class="flex items-center">
+                            <span class="mr-3 text-emerald-500">»</span> 
                             <span class="text-sm">Continual Learning Flow: $\partial_t \theta_t = - P_\Sigma^\perp \nabla_{\theta} \mathcal{L}_{new}(\theta_t)$</span>
                         </p>
                         <div class="h-px bg-emerald-500/20 my-2"></div>
                         <p class="flex items-center">
                             <span class="mr-3 text-emerald-500">»</span>
                             <span>Kim-Einstein Law: $(1 + \eta\Sigma)G_{\mu\nu} + \Lambda_0 g_{\mu\nu} + \eta(g_{\mu\nu}\Box - \nabla_\mu\nabla_\nu)\Sigma = \kappa_0 T_{\mu\nu}$</span>
-                        </p>
-                        <p class="flex items-center">
-                            <span class="mr-3 text-emerald-500">»</span>
-                            <span>The Solipsistic Limit: $\Xi = \beta\Delta^{(\mu)} \gg 1 \implies \rho_\mu \to |\phi_0\rangle\langle\phi_0|$</span>
                         </p>
                     </div>
                 </div>
@@ -341,10 +352,38 @@
             
             <div class="grid grid-cols-1 gap-6">
                 
-                <div class="border border-zinc-800 bg-zinc-900/40 p-6 md:p-8 rounded-lg hover:border-emerald-500/40 transition-colors group relative overflow-hidden">
+                <div class="border border-emerald-brand bg-emerald-brand-light p-6 md:p-8 rounded-lg hover:border-emerald-500 transition-colors group relative overflow-hidden shadow-emerald-brand">
+                    <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-4 gap-3 relative z-10">
+                        <h4 class="text-xl font-bold text-white">Spectral Gap Amplification & Coherence Control</h4>
+                        <span class="mono text-[10px] bg-emerald-900/40 text-emerald-brand px-2.5 py-1 rounded border border-emerald-brand font-bold tracking-wider">NEW / OPERATOR THEORY</span>
+                    </div>
+                    <p class="text-sm text-emerald-400/80 mb-6 font-medium relative z-10">Domain: Quantum Information & Classical Photonics</p>
+                    <ul class="text-sm space-y-3 mb-6 relative z-10 text-zinc-400">
+                        <li class="flex items-start"><span class="text-emerald-500 mr-2 mt-0.5">▪</span> <span><strong class="text-zinc-200">Thesis:</strong> Coherence can be strictly enforced by synthetically amplifying the spectral gap ($\Delta^{(\alpha)} \ge \Delta^{(0)} + \alpha$) via an orthogonal projection penalty ($P_\perp$).</span></li>
+                        <li class="flex items-start"><span class="text-emerald-500 mr-2 mt-0.5">▪</span> <span><strong class="text-zinc-200">Resolution:</strong> Establishes universal operator-theoretic bounds demonstrating simultaneous semigroup smoothing, thermodynamic partition collapse ($Z(\beta) \to e^{-\beta\lambda_0}$), and asymptotic suppression of geometric spectral action invariants.</span></li>
+                    </ul>
+                    <div class="relative z-10">
+                        <details class="cursor-pointer group/details">
+                            <summary class="text-[10px] font-mono text-emerald-brand font-bold tracking-widest hover:text-emerald-400 transition-colors uppercase list-none flex items-center">
+                                <svg class="w-3 h-3 mr-2 transform group-open/details:rotate-90 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                                [ VIEW BIBTEX CITATION ]
+                            </summary>
+                            <div class="mt-3 bg-black/60 border border-emerald-500/20 p-4 rounded text-xs mono text-emerald-300/70 overflow-x-auto">
+<pre><code>@article{kim2026spectralgap,
+  title={Spectral Gap Amplification, Smoothing, and Spectral Action: A Unified Operator-Theoretic Framework for Coherence Control},
+  author={Kim, Andrew},
+  journal={Emerald Research Group},
+  year={2026}
+}</code></pre>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+
+                <div class="border border-zinc-800 bg-zinc-900/40 p-6 md:p-8 rounded-lg hover:border-zinc-500/40 transition-colors group relative overflow-hidden">
                     <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-4 gap-3 relative z-10">
                         <h4 class="text-xl font-bold text-white">Ω–Σ Continual Learning Architecture</h4>
-                        <span class="mono text-[10px] bg-emerald-900/30 text-emerald-400 px-2.5 py-1 rounded border border-emerald-700/50 font-bold tracking-wider">SOFTWARE / ENTERPRISE AI</span>
+                        <span class="mono text-[10px] bg-zinc-800 text-zinc-300 px-2.5 py-1 rounded border border-zinc-700 font-bold tracking-wider">SOFTWARE / ENTERPRISE AI</span>
                     </div>
                     <p class="text-sm text-zinc-400 mb-6 font-medium relative z-10">Domain: Foundation Model Infrastructure / Hallucination-Proof AI</p>
                     <ul class="text-sm space-y-3 mb-8 relative z-10 text-zinc-400">
@@ -395,11 +434,16 @@
             <h3 class="text-xs font-bold text-zinc-500 uppercase tracking-widest mb-5 mono">06 // Bare-Metal Telemetry & Numerical Validation</h3>
             <div class="bg-black/80 border border-zinc-800 rounded-lg p-6 md:p-8 font-mono">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8 border-b border-zinc-800 pb-8">
-                    <div class="border-l-2 border-emerald-500 pl-4 bg-gradient-to-r from-emerald-500/5 to-transparent">
-                        <div class="text-[10px] text-emerald-400 mb-2 tracking-widest">FORGETTING_REDUCTION_DELTA</div>
-                        <div class="text-2xl text-white font-bold mb-2">20.86%</div>
-                        <div class="text-xs text-zinc-400">Absolute retention improvement over unconstrained baseline via JAX tensor projection.</div>
-                    </div>
+                   <div class="border-l-2 border-emerald-500 pl-4 bg-gradient-to-r from-emerald-500/5 to-transparent">
+					<div class="text-[10px] text-emerald-400 mb-2 tracking-widest">FORGETTING_REDUCTION_DELTA</div>
+					<div class="text-2xl text-white font-bold mb-2">20.86%</div>
+					<div class="text-xs text-zinc-400">Absolute retention improvement over unconstrained baseline via JAX tensor projection.</div>
+    
+    <a href="data/forgetting_reduction_telemetry.csv" target="_blank" class="text-[10px] text-emerald-brand hover:text-emerald-400 transition-colors mt-3 inline-flex items-center font-bold tracking-widest mono">
+        <svg class="w-3 h-3 mr-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+        [ RAW_TELEMETRY.CSV ]
+    </a>
+</div>
                     <div class="border-l-2 border-red-500 pl-4 bg-gradient-to-r from-red-500/5 to-transparent">
                         <div class="text-[10px] text-red-400 mb-2 tracking-widest">ENTROPY_COLLAPSE</div>
                         <div class="text-2xl text-white font-bold mb-2">$S(\rho_\mu) \to 0$</div>
