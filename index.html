@@ -204,7 +204,26 @@
         </section>
 
         <section class="mb-16">
-            <h3 class="text-xs font-bold text-zinc-500 uppercase tracking-widest mb-5 mono">02 // Operator Telemetry [GRANDMASTER_REGIME]</h3>
+            <h3 onclick="document.getElementById('dysentery-log').classList.toggle('hidden')" class="text-xs font-bold text-zinc-500 hover:text-red-400 cursor-pointer uppercase tracking-widest mb-5 mono transition-colors duration-300">
+                02 // Operator Telemetry [GRANDMASTER_REGIME] <span class="text-[8px] opacity-50">(CLICK TO VIEW FAILURE MODES)</span>
+            </h3>
+
+            <div id="dysentery-log" class="hidden mb-6 bg-[#1a0505] border border-red-900/50 rounded-lg p-5 mono text-xs shadow-[0_0_15px_rgba(220,38,38,0.15)] relative overflow-hidden">
+                <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-red-600 to-transparent opacity-50"></div>
+                <h4 class="text-red-500 font-bold mb-3 uppercase tracking-widest border-b border-red-900/50 pb-2 flex items-center">
+                    <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+                    WARNING: QUANTUM DYSENTERY
+                </h4>
+                <div class="space-y-3 text-red-300/80">
+                    <p><strong class="text-red-400">DEF 1.1 [SPECTRAL DYSENTERY]:</strong> Spectrum fails to contain dynamics. Gap collapses ($\Delta(A)=0$). Resolvent blow-up. Mass leaks from the protected sector at a rate incompatible with exponential confinement.</p>
+                    <p><strong class="text-red-400">DEF 1.2 [QUANTUM DYSENTERY]:</strong> Phase information and coherent occupation are flushed into noise. Entropy $S(\rho(t))$ grows irreversibly toward a mixed state.</p>
+                    <div class="bg-red-950/50 p-3 rounded border border-red-900/30 mt-3">
+                        <span class="text-red-500 font-bold">THE OREGON-TRAIL FORMULATION:</span><br>
+                        "Without the Anti-Dysentery Barrier ($c_* > 0$) and $\Omega-\Sigma$ Gap Amplification, your system will rapidly succumb to decoherence.<br><br>
+                        <span class="text-red-400 animate-pulse">>>> YOU HAVE DIED OF QUANTUM DYSENTERY.</span>"
+                    </div>
+                </div>
+            </div>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6 font-mono">
                 <div class="bg-zinc-900/40 border border-zinc-800 p-6 rounded-lg">
                     <h4 class="text-xs font-bold text-blue-400 mb-4 uppercase">Fig 1.1: Thermodynamic AI Preservation</h4>
